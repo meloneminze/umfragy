@@ -1,3 +1,7 @@
 body {
   margin: 0;
+  background: linear-gradient(rgb(167, 166, 166), rgb(200, 200, 200));
+  height: 100vh;
+  color: black;
+  font-family: monospace;
 }
