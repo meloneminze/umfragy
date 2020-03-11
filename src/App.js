@@ -1,9 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+
 import "./App.css";
 
 function App() {
-  return <div>Umfragy</div>;
+  return (
+    <>
+      <Header />
+      <main></main>
+    </>
+  );
 }
 
 export default App;
