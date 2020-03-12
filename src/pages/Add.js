@@ -7,6 +7,7 @@ import ButtonClear from "../components/ButtonClear";
 import ButtonSave from "../components/ButtonSave";
 
 function Add() {
+
   const [question, setQuestion] = React.useState("");
   const [answerOne, setAnswerOne] = React.useState("");
   const [answerTwo, setAnswerTwo] = React.useState("");
@@ -74,6 +75,7 @@ function Add() {
           <Link to="/vote">Vote</Link>
         </CardAnswer>
       </form>
+
     </div>
   );
 }
