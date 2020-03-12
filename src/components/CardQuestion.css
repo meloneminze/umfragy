@@ -1,8 +1,8 @@
 .CardQuestion {
-    background-color: azure;
-    border-radius: 10px;
-    height: 150px;
-    max-width: 200px;
-    width: 100%;
-    
+  background-color: azure;
+  border-radius: 10px;
+  height: 150px;
+  max-width: 200px;
+  width: 100%;
+  font-family: monospace;
 }
