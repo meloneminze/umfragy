@@ -1,0 +1,26 @@
+{
+  "polls": [
+    {
+      "id": 1,
+      "question": "Essen?",
+      "answerOne": "Doener",
+      "answerTwo": "Yufka",
+      "answerThree": "Kebab"
+    },
+    {
+      "id": 2,
+      "question": "Date?",
+      "answerOne": "Kino",
+      "answerTwo": "Tanzen",
+      "answerThree": "Essen"
+    },
+
+    {
+      "question": "Welchen Disney-Film magst du?",
+      "answerOne": "Arielle",
+      "answerTwo": "Susi und Strolch",
+      "answerThree": "Frozen",
+      "id": 3
+    }
+  ]
+}
