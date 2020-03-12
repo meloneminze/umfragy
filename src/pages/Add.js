@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CardQuestion from "../components/CardQuestion";
 import CardAnswer from "../components/CardAnswer";
 import "./Add.css";
-import ButtonClear from "../components/ButtonClear";
+// import ButtonClear from "../components/ButtonClear";
 import ButtonSave from "../components/ButtonSave";
 
 function Add() {
@@ -82,7 +82,19 @@ function Add() {
             }}
           ></input>
           <ButtonSave className="buttonSave">Save</ButtonSave>
-          <ButtonClear>Clear</ButtonClear>
+          <button
+            className="buttonClear"
+            type="button"
+            onClick={event => {
+              setAnswerTwo("");
+              setAnswerOne("");
+              setAnswerThree("");
+              setQuestion("");
+            }}
+          >
+            Clear
+          </button>
+          {/* <ButtonClear className="buttonClear">Clear</ButtonClear> */}
 
           <Link to="/vote">Vote</Link>
         </CardAnswer>
