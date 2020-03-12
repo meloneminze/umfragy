@@ -1,0 +1,35 @@
+. .add-form {
+  display: flex;
+  direction: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+.add-form__input {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.add-form__input-question {
+  background-color: azure;
+  border-radius: 10px;
+  height: 150px;
+  max-width: 200px;
+  width: 100%;
+  font-family: monospace;
+}
+
+.add-form__input-answer {
+  background-color: azure;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
