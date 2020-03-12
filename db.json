@@ -1,0 +1,39 @@
+{
+  "polls": [
+    {
+      "id": 1,
+      "question": "Essen?",
+      "answerOne": "Doener",
+      "answerTwo": "Yufka",
+      "answerThree": "Kebab"
+    },
+    {
+      "id": 2,
+      "question": "Date?",
+      "answerOne": "Kino",
+      "answerTwo": "Tanzen",
+      "answerThree": "Essen"
+    },
+    {
+      "question": "Welchen Disney-Film magst du?",
+      "answerOne": "Arielle",
+      "answerTwo": "Susi und Strolch",
+      "answerThree": "Frozen",
+      "id": 3
+    },
+    {
+      "question": "Wann gehst du ins Bett?",
+      "answerOne": "22 Uhr",
+      "answerTwo": "24 Uhr",
+      "answerThree": "2 Uhr",
+      "id": 4
+    },
+    {
+      "question": "Welchen Disney-Film magst du?",
+      "answerOne": "Arielle",
+      "answerTwo": "Susi und Strolch",
+      "answerThree": "Frozen",
+      "id": 5
+    }
+  ]
+}
