@@ -8,7 +8,7 @@ const POLLS_API_URL =
 
 function Result() {
   const { pollId } = useParams();
-  const { poll, setPoll } = React.useState(null);
+  const [poll, setPoll] = React.useState(null);
 
   React.useEffect(() => {
     async function getPoll() {
@@ -18,7 +18,7 @@ function Result() {
     }
 
     getPoll();
-  }, [pollId]);
+  }, [pollId, setPoll]);
 
   return (
     <div>

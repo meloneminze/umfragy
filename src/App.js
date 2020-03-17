@@ -1,5 +1,4 @@
 import React from "react";
-
 import Add from "./pages/Add";
 import Vote from "./pages/Vote";
 import Result from "./pages/Result";
@@ -24,7 +23,7 @@ function App() {
           <Route path="/polls/:pollId">
             <Result />
           </Route>
-          <Route path="/vote">
+          <Route path="/polls/:pollId/vote">
             <Vote />
           </Route>
           <Route exact path="/">
