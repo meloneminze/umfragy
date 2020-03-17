@@ -6,7 +6,7 @@
       "answerOne": "Doener",
       "answerTwo": "Yufka",
       "answerThree": "Kebab",
-      "votes": ["answerOne", "answerTwo", "answerTwo", "answerTwo"]
+      "votes": ["answerOne", "answerTwo", "answerThree", "answerTwo"]
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "answerTwo": "Susi und Strolch",
       "answerThree": "Frozen",
       "id": 3,
-      "votes": ["answerOne", "answerTwo", "answerTwo", "answerTwo"]
+      "votes": ["answerThree", "answerThree", "answerThree", "answerThree"]
     },
     {
       "question": "Wann gehst du ins Bett?",
