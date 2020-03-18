@@ -83,7 +83,7 @@ function Add() {
               setAnswerThree(event.target.value);
             }}
           ></input>
-          <ButtonSave className="buttonSave">Save</ButtonSave>
+          <ButtonSave>Save</ButtonSave>
           <button
             className="buttonClear"
             type="button"
