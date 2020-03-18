@@ -1,17 +1,12 @@
 import styled from "@emotion/styled";
-import React from "react";
 
-const CardQuestionCSS = styled.div`
-  background-color: azure;
+const CardQuestion = styled.div`
+  background: ${props => props.theme.colors.backgroundCard};
   border-radius: 10px;
   height: 150px;
   width: 200px;
 
   font-family: monospace;
 `;
-
-function CardQuestion(props) {
-  return <CardQuestionCSS>{props.children}</CardQuestionCSS>;
-}
 
 export default CardQuestion;
