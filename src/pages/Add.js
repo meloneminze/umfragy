@@ -2,10 +2,56 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CardQuestion from "../components/CardQuestion";
 import CardAnswer from "../components/CardAnswer";
-import "./Add.css";
-// import ButtonClear from "../components/ButtonClear";
+import styled from "@emotion/styled";
 import ButtonSave from "../components/ButtonSave";
-// import Form from "../components/Form";
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  font-family: monospace;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  color: ${props => props.theme.colors.textPrimary};
+  margin-bottom: 10px;
+  text-align: center;
+`;
+
+const QuestionInput = styled(Input)`
+  background: ${props => props.theme.colors.backgroundCard};
+  border-radius: 10px;
+  height: 150px;
+  max-width: 200px;
+  width: 100%;
+  font-family: monospace;
+`;
+
+const AnswerInput = styled(Input)`
+  background: ${props => props.theme.colors.backgroundCard};
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 10px;
+`;
+
+const ButtonClear = styled.button`
+  background: ${props => props.theme.colors.ButtonClear};
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: right;
+`;
+
+const DIV = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`;
 
 function Add() {
   const [question, setQuestion] = React.useState("");
@@ -40,52 +86,47 @@ function Add() {
   }
 
   return (
-    <div className="div">
-      <form className="add-form" onSubmit={handleSubmit}>
+    <DIV>
+      <Form onSubmit={handleSubmit}>
         <h2>Your Question?</h2>
         <CardQuestion>
-          <input
+          <QuestionInput
             type="text"
             placeholder="Enter question"
-            className="add-form__input add-form__input-question"
             value={question}
             onChange={event => {
               setQuestion(event.target.value);
             }}
-          ></input>
+          ></QuestionInput>
         </CardQuestion>
         <h2>Possible Answers:</h2>
         <CardAnswer>
-          <input
+          <AnswerInput
             type="text"
             placeholder="Answer 1"
-            className="add-form__input add-form__input-answer"
             value={answerOne}
             onChange={event => {
               setAnswerOne(event.target.value);
             }}
-          ></input>
-          <input
+          ></AnswerInput>
+          <AnswerInput
             type="text"
             placeholder="Answer 2"
-            className="add-form__input add-form__input-answer"
             value={answerTwo}
             onChange={event => {
               setAnswerTwo(event.target.value);
             }}
-          ></input>
-          <input
+          ></AnswerInput>
+          <AnswerInput
             type="text"
             placeholder="Answer 3"
-            className="add-form__input add-form__input-answer"
             value={answerThree}
             onChange={event => {
               setAnswerThree(event.target.value);
             }}
-          ></input>
+          ></AnswerInput>
           <ButtonSave>Save</ButtonSave>
-          <button
-            className="buttonClear"
+          <ButtonClear
             type="button"
             onClick={event => {
               setAnswerTwo("");
@@ -95,13 +136,12 @@ function Add() {
             }}
           >
             Clear
-          </button>
-          {/* <ButtonClear className="buttonClear">Clear</ButtonClear> */}
+          </ButtonClear>
 
           <Link to="/polls/:pollId/vote">Vote</Link>
         </CardAnswer>
-      </form>
-    </div>
+      </Form>
+    </DIV>
   );
 }
 export default Add;

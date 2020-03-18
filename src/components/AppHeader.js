@@ -24,7 +24,7 @@ function AppHeader({ onSwitchColorButtonClick }) {
       <Logo />
       <SwitchColorButton onClick={onSwitchColorButtonClick}>
         <span role="img" aria-label="Switch theme">
-          🌓
+          🕯
         </span>
       </SwitchColorButton>
     </Header>

@@ -2,9 +2,9 @@ const colorful = {
   colors: {
     textPrimary: "#084177",
     backgroundPrimary: "#ffd1bd",
-    backgroundCard: "#f19292",
-    SaveButton: "#ffb0cd"
-    // ClearButton: "c2f0fc"
+    backgroundCard: "#fbcffc",
+    SaveButton: "#f19292",
+    ButtonClear: "#f76a8c"
   }
 };
 
