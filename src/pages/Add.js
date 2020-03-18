@@ -7,16 +7,6 @@ import "./Add.css";
 import ButtonSave from "../components/ButtonSave";
 // import Form from "../components/Form";
 
-import { ThemeProvider } from "emotion-theming";
-
-const theme = {
-  colors: {
-    primary: "azure",
-    second: "#93b2f8",
-    third: "#ffcce6"
-  }
-};
-
 function Add() {
   const [question, setQuestion] = React.useState("");
   const [answerOne, setAnswerOne] = React.useState("");
