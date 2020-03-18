@@ -5,6 +5,7 @@ import CardAnswer from "../components/CardAnswer";
 import "./Add.css";
 // import ButtonClear from "../components/ButtonClear";
 import ButtonSave from "../components/ButtonSave";
+// import Form from "../components/Form";
 
 function Add() {
   const [question, setQuestion] = React.useState("");
@@ -19,7 +20,8 @@ function Add() {
       question: question,
       answerOne: answerOne,
       answerTwo: answerTwo,
-      answerThree: answerThree
+      answerThree: answerThree,
+      votes: []
     };
 
     const response = await fetch(
@@ -96,7 +98,7 @@ function Add() {
           </button>
           {/* <ButtonClear className="buttonClear">Clear</ButtonClear> */}
 
-          <Link to="/vote">Vote</Link>
+          <Link to="/polls/:pollId/vote">Vote</Link>
         </CardAnswer>
       </form>
     </div>
