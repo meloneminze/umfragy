@@ -6,7 +6,12 @@
       "answerOne": "Doener",
       "answerTwo": "Yufka",
       "answerThree": "Kebab",
-      "votes": ["answerOne", "answerTwo", "answerThree", "answerTwo"]
+      "votes": [
+        "answerOne",
+        "answerTwo",
+        "answerThree",
+        "answerTwo"
+      ]
     },
     {
       "id": 2,
@@ -14,7 +19,12 @@
       "answerOne": "Kino",
       "answerTwo": "Tanzen",
       "answerThree": "Essen",
-      "votes": ["answerOne", "answerTwo", "answerTwo", "answerTwo"]
+      "votes": [
+        "answerOne",
+        "answerTwo",
+        "answerTwo",
+        "answerTwo"
+      ]
     },
     {
       "question": "Welchen Disney-Film magst du?",
@@ -22,7 +32,12 @@
       "answerTwo": "Susi und Strolch",
       "answerThree": "Frozen",
       "id": 3,
-      "votes": ["answerThree", "answerThree", "answerThree", "answerThree"]
+      "votes": [
+        "answerThree",
+        "answerThree",
+        "answerThree",
+        "answerThree"
+      ]
     },
     {
       "question": "Wann gehst du ins Bett?",
@@ -30,7 +45,12 @@
       "answerTwo": "24 Uhr",
       "answerThree": "2 Uhr",
       "id": 4,
-      "votes": ["answerOne", "answerTwo", "answerTwo", "answerTwo"]
+      "votes": [
+        "answerOne",
+        "answerTwo",
+        "answerTwo",
+        "answerTwo"
+      ]
     },
     {
       "question": "Welchen Disney-Film magst du?",
@@ -38,7 +58,20 @@
       "answerTwo": "Susi und Strolch",
       "answerThree": "Frozen",
       "id": 5,
-      "votes": ["answerOne", "answerTwo", "answerTwo", "answerTwo"]
+      "votes": [
+        "answerOne",
+        "answerTwo",
+        "answerTwo",
+        "answerTwo"
+      ]
+    },
+    {
+      "question": "g",
+      "answerOne": "h",
+      "answerTwo": "h",
+      "answerThree": "h",
+      "votes": [],
+      "id": 6
     }
   ]
 }
