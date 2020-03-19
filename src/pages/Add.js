@@ -61,9 +61,11 @@ function Add() {
   const [answerOne, setAnswerOne] = React.useState("");
   const [answerTwo, setAnswerTwo] = React.useState("");
   const [answerThree, setAnswerThree] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
+    setIsLoading(true);
 
     const poll = {
       question: question,
@@ -116,7 +118,8 @@ function Add() {
               setAnswerThree(event.target.value);
             }}
           ></AnswerInput>
-          <ButtonSave>Save</ButtonSave>
+          <ButtonSave disabled={isLoading}>Save</ButtonSave>
+
           <ButtonClear
             type="button"
             onClick={event => {
