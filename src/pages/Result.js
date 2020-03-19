@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import PieChart from "react-minimal-pie-chart";
 
 const POLLS_API_URL =
-  process.env.REACT_API_POLLS_API || "http://localhost:4000/polls";
-// "https://my-json-server.typicode.com/meloneminze/umfragy/polls";
+  process.env.REACT_API_POLLS_API ||
+  "https://my-json-server.typicode.com/meloneminze/umfragy/polls";
+//"http://localhost:4000/polls"
 
 function Result() {
   const { pollId } = useParams();

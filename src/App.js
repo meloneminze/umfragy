@@ -8,6 +8,7 @@ import styled from "@emotion/styled";
 import GlobalStyles from "./components/GlobalStyles";
 import { ThemeProvider } from "emotion-theming";
 import monotonous from "./themes/monotonous";
+import colorful from "./themes/colorful";
 
 const Main = styled.main`
   padding: 40px 20px;
@@ -18,11 +19,16 @@ const Main = styled.main`
 `;
 
 function App() {
+  const [theme, setTheme] = React.useState(colorful);
   return (
-    <ThemeProvider theme={monotonous}>
+    <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyles />
-        <AppHeader />
+        <AppHeader
+          onSwitchColorButtonClick={() => {
+            setTheme(theme === monotonous ? colorful : monotonous);
+          }}
+        />
         <Main>
           <Switch>
             <Route path="/polls/:pollId">

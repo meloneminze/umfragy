@@ -1,14 +1,5 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
-// import { ThemeProvider } from "emotion-theming";
-
-// const theme = {
-//   colors: {
-//     primary: "azure",
-//     second: "#93b2f8",
-//     third: "#ffcce6"
-//   }
-// };
 
 function GlobalStyles() {
   return (
@@ -19,7 +10,7 @@ function GlobalStyles() {
 
           background: ${theme.colors.backgroundPrimary};
           height: 100vh;
-          color: black;
+          color: ${theme.colors.textPrimary};
           font-family: monospace;
         }
       `}
