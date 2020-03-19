@@ -3,23 +3,20 @@ import { useParams } from "react-router-dom";
 // import styled from "@emotion/styled";
 import PieChart from "react-minimal-pie-chart";
 
-const POLLS_API_URL =
-  process.env.REACT_API_POLLS_API ||
-  "https://my-json-server.typicode.com/meloneminze/umfragy/polls";
-//"http://localhost:4000/polls"
+import { getPoll } from "../api/polls";
 
 function Result() {
   const { pollId } = useParams();
   const [poll, setPoll] = React.useState(null);
 
   React.useEffect(() => {
-    async function getPoll() {
-      const response = await fetch(`${POLLS_API_URL}/${pollId}`);
-      const poll = await response.json();
+    async function doGetPoll() {
+      const poll = await getPoll(pollId);
+
       setPoll(poll);
     }
 
-    getPoll();
+    doGetPoll();
   }, [pollId, setPoll]);
 
   console.log(poll);

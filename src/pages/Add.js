@@ -4,6 +4,8 @@ import CardQuestion from "../components/CardQuestion";
 import CardAnswer from "../components/CardAnswer";
 import styled from "@emotion/styled";
 import ButtonSave from "../components/ButtonSave";
+import { postPoll } from "../api/polls";
+import { useHistory } from "react-router-dom";
 
 const Form = styled.form`
   display: flex;
@@ -54,6 +56,7 @@ const DIV = styled.div`
 `;
 
 function Add() {
+  const history = useHistory();
   const [question, setQuestion] = React.useState("");
   const [answerOne, setAnswerOne] = React.useState("");
   const [answerTwo, setAnswerTwo] = React.useState("");
@@ -70,21 +73,9 @@ function Add() {
       votes: []
     };
 
-    const response = await fetch(
-      process.env.REACT_APP_POLLS_API ||
-        "https://my-json-server.typicode.com/meloneminze/umfragy/polls",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(poll)
-      }
-    );
-    const createdPoll = await response.json();
-    alert(`Created poll with the id ${createdPoll.id}`);
+    const createdPoll = await postPoll(poll);
+    history.push(`/polls/${createdPoll.id}/vote`);
   }
-
   return (
     <DIV>
       <Form onSubmit={handleSubmit}>
@@ -144,4 +135,5 @@ function Add() {
     </DIV>
   );
 }
+
 export default Add;
