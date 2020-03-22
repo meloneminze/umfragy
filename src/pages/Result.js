@@ -1,9 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// import styled from "@emotion/styled";
 import PieChart from "react-minimal-pie-chart";
-
 import { getPoll } from "../api/polls";
+import styled from "@emotion/styled";
 
 function Result() {
   const { pollId } = useParams();
@@ -29,8 +28,6 @@ function Result() {
 
   return (
     <div>
-      <h2>Question was:</h2>
-      <h2>{poll?.question}</h2>
       <h2>Results:</h2>
       <h2>
         {poll?.question} ({poll?.votes.length} votes)

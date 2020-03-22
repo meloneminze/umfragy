@@ -31,10 +31,10 @@ function App() {
         />
         <Main>
           <Switch>
-            <Route path="/polls/:pollId">
+            <Route exact path="/polls/:pollId">
               <Result />
             </Route>
-            <Route path="/polls/:pollId/vote">
+            <Route exact path="/polls/:pollId/vote">
               <Vote />
             </Route>
             <Route exact path="/">
