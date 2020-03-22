@@ -23,7 +23,9 @@
         "answerOne",
         "answerTwo",
         "answerTwo",
-        "answerTwo"
+        "answerTwo",
+        "answerOne",
+        "answerOne"
       ]
     },
     {
@@ -33,6 +35,9 @@
       "answerThree": "Frozen",
       "id": 3,
       "votes": [
+        "answerThree",
+        "answerThree",
+        "answerThree",
         "answerThree",
         "answerThree",
         "answerThree",

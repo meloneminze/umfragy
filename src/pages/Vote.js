@@ -40,9 +40,6 @@ function Vote() {
     await patchPoll(pollId, newPoll);
     history.push(`/polls/${poll.idvote}`);
   }
-  if (isLoadingGetPoll) {
-    return <div>Loading...</div>;
-  }
 
   const options = ["answerOne", "answerTwo", "answerThree"];
 
