@@ -5,6 +5,7 @@ import ButtonSave from "../components/ButtonSave";
 import Form from "../components/Form";
 import RadioInput from "../components/RadioInput";
 import { patchPoll, getPoll } from "../api/polls";
+import Loading from "../components/Loading";
 
 function Vote() {
   const { pollId } = useParams();
@@ -13,15 +14,19 @@ function Vote() {
   const [answer, setAnswer] = React.useState(null);
   const [isLoadingPatchPoll, setIsLoadingPatchPoll] = React.useState(false);
   const [isLoadingGetPoll, setIsLoadingGetPoll] = React.useState(true);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
-      setIsLoadingGetPoll(true);
-      const poll = await getPoll(pollId);
-      setPoll(poll);
-      setIsLoadingGetPoll(false);
+      try {
+        setIsLoadingGetPoll(true);
+        const poll = await getPoll(pollId);
+        setPoll(poll);
+        setIsLoadingGetPoll(false);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
     }
-
     doGetPoll();
   }, [pollId]);
 
@@ -33,13 +38,18 @@ function Vote() {
     newPoll.votes.push(answer);
 
     await patchPoll(pollId, newPoll);
-    history.push(`/polls/${poll.id}`);
-  }
-  if (isLoadingGetPoll) {
-    return <div>Loading...</div>;
+    history.push(`/polls/${poll.idvote}`);
   }
 
   const options = ["answerOne", "answerTwo", "answerThree"];
+
+  if (errorMessage) {
+    return <div>{errorMessage}</div>;
+  }
+  if (isLoadingGetPoll) {
+    return <Loading />;
+  }
+
   return (
     <div>
       <Form onSubmit={handleSubmit}>

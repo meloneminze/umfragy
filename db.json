@@ -23,7 +23,9 @@
         "answerOne",
         "answerTwo",
         "answerTwo",
-        "answerTwo"
+        "answerTwo",
+        "answerOne",
+        "answerOne"
       ]
     },
     {
@@ -33,6 +35,9 @@
       "answerThree": "Frozen",
       "id": 3,
       "votes": [
+        "answerThree",
+        "answerThree",
+        "answerThree",
         "answerThree",
         "answerThree",
         "answerThree",
@@ -72,6 +77,48 @@
       "answerThree": "h",
       "votes": [],
       "id": 6
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 7
+    },
+    {
+      "question": "Musik?",
+      "answerOne": "Yes please",
+      "answerTwo": "No thanks ",
+      "answerThree": "Boom",
+      "votes": [],
+      "id": 8
+    },
+    {
+      "question": "hallo?",
+      "answerOne": "Ja?",
+      "answerTwo": "Was ist?",
+      "answerThree": "...",
+      "votes": [],
+      "id": 9
+    },
+    {
+      "question": "Kinder?",
+      "answerOne": "Ja",
+      "answerTwo": "Nein",
+      "answerThree": "Geh weg",
+      "votes": [],
+      "id": 10
+    },
+    {
+      "question": "Kaninchen?",
+      "answerOne": "Süß",
+      "answerTwo": "Lecker",
+      "answerThree": "Hattu Möhrchen",
+      "votes": [
+        "answerThree"
+      ],
+      "id": 11
     }
   ]
 }

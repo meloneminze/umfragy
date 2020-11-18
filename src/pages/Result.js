@@ -1,21 +1,28 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// import styled from "@emotion/styled";
 import PieChart from "react-minimal-pie-chart";
-
 import { getPoll } from "../api/polls";
+import Loading from "../components/Loading";
+
+// import styled from "@emotion/styled";
 
 function Result() {
   const { pollId } = useParams();
   const [poll, setPoll] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
-      const poll = await getPoll(pollId);
-
-      setPoll(poll);
+      try {
+        setIsLoading(true);
+        const poll = await getPoll(pollId);
+        setPoll(poll);
+        setIsLoading(false);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
     }
-
     doGetPoll();
   }, [pollId, setPoll]);
 
@@ -27,10 +34,15 @@ function Result() {
   const answerThreeVotes =
     poll?.votes.filter(vote => vote === "answerThree").length || 0;
 
+  if (errorMessage) {
+    return <div>{errorMessage}</div>;
+  }
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <div>
-      <h2>Question was:</h2>
-      <h2>{poll?.question}</h2>
       <h2>Results:</h2>
       <h2>
         {poll?.question} ({poll?.votes.length} votes)
